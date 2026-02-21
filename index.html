@@ -1,19 +1,23 @@
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<div style="font-family:'Poppins', sans-serif;">
+
 <h1 style="color:#2c3e50;">Understanding Arrays in Java</h1>
 
 <p>
-Arrays in Java allow us to store multiple values of the same data type inside a single variable. 
-They are one of the most fundamental data structures used in programming.
+<b>Arrays</b> in Java allow us to store multiple values of the same <b>data type</b> inside a single variable. 
+They are one of the most fundamental <b>data structures</b> used in programming.
 </p>
 
 <h3 style="color:#34495e;">What You Will Learn</h3>
 
 <ul>
-  <li>What an array is ?</li>
-  <li>How to declare and create an array ?</li>
-  <li>Primitive vs Object arrays</li>
-  <li>How to access and modify elements ?</li>
-  <li>How to traverse an array using loops ?</li>
-  <li>How to pass arrays to methods ?</li>
+  <li><b>What an array is ?</b></li>
+  <li>How to <b>declare</b> and <b>create</b> an array ?</li>
+  <li><b>Primitive vs Object arrays</b></li>
+  <li>How to <b>access</b> and <b>modify</b> elements ?</li>
+  <li>How to <b>traverse</b> an array using loops</li>
+  <li>How to <b>pass arrays</b> to methods ?</li>
 </ul>
 
 <h3 style="color:#34495e;">Basic Example</h3>
@@ -53,31 +57,6 @@ Numbers: 5 15 25 35
 Cities: Delhi Mumbai Chennai
 </pre>
 
-<h3 style="color:#34495e;">Explanation</h3>
-
-<table border="1" cellpadding="8" style="border-collapse:collapse;">
-  <tr style="background:#ecf0f1;">
-    <th>Concept</th>
-    <th>Meaning</th>
-  </tr>
-  <tr>
-    <td>Array</td>
-    <td>Collection of similar data stored in continuous memory</td>
-  </tr>
-  <tr>
-    <td>Index</td>
-    <td>Position number of element (starts from 0)</td>
-  </tr>
-  <tr>
-    <td>length</td>
-    <td>Property used to get total number of elements</td>
-  </tr>
-  <tr>
-    <td>Loop</td>
-    <td>Used to access elements one by one</td>
-  </tr>
-</table>
-
 <h3 style="color:#34495e;">Declaring and Creating an Array</h3>
 
 <pre style="background:#f4f6f7; padding:15px; border-radius:6px; display:inline-block; white-space:pre-wrap;">
@@ -86,7 +65,7 @@ arr = new int[4]; // Memory allocation
 </pre>
 
 <p>
-Once created, the array size cannot be changed.
+Once created, the <b>array size is fixed</b> and cannot be changed.
 </p>
 
 <h3 style="color:#34495e;">Using Array Literal</h3>
@@ -96,7 +75,7 @@ int[] marks = {80, 85, 90, 95};
 </pre>
 
 <p>
-Java automatically determines the size based on the number of elements.
+Java automatically determines the <b>size of the array</b>.
 </p>
 
 <h3 style="color:#34495e;">Accessing Elements</h3>
@@ -109,7 +88,7 @@ System.out.println(data[2]);  // 30
 </pre>
 
 <p>
-Valid index range: 0 to data.length - 1
+Valid <b>index range</b>: 0 to data.length - 1
 </p>
 
 <h3 style="color:#34495e;">Updating Elements</h3>
@@ -149,43 +128,42 @@ public static void printSum(int[] arr) {
 <h3 style="color:#34495e;">Real Life Examples of Arrays</h3>
 
 <ul>
-  <li><b>Student Marks:</b> Storing marks of 5 subjects in an array like {85, 90, 78, 88, 92}</li>
-  <li><b>Temperature Records:</b> Storing daily temperatures of a week</li>
-  <li><b>Roll Numbers:</b> Storing roll numbers of students in a classroom</li>
-  <li><b>Monthly Expenses:</b> Tracking expenses for 12 months using an array</li>
-  <li><b>Product Prices:</b> Storing prices of items in a shopping cart</li>
+  <li><b>Student Marks:</b> Storing marks of multiple subjects</li>
+  <li><b>Temperature Records:</b> Daily weather data</li>
+  <li><b>Roll Numbers:</b> List of students in a class</li>
+  <li><b>Monthly Expenses:</b> Expense tracking for 12 months</li>
+  <li><b>Product Prices:</b> Prices in a shopping cart</li>
 </ul>
-
-<p>
-In real applications like banking systems, exam result systems, and inventory management, arrays are frequently used to store and process structured data efficiently.
-</p>
 
 <h3 style="color:#34495e;">Common Error</h3>
 
 <pre style="background:#f4f6f7; padding:15px; border-radius:6px; display:inline-block; white-space:pre-wrap;">
 int[] arr = new int[3];
-System.out.println(arr[4]);   // Causes ArrayIndexOutOfBoundsException
+System.out.println(arr[4]);   // ArrayIndexOutOfBoundsException
 </pre>
 
 <h3 style="color:#34495e;">Advantages of Arrays</h3>
 
 <ul>
-  <li>Fast element access using index</li>
-  <li>Simple and easy to use</li>
-  <li>Efficient memory structure</li>
+  <li><b>Fast access</b> using index (O(1))</li>
+  <li><b>Simple structure</b></li>
+  <li><b>Efficient memory usage</b></li>
 </ul>
 
 <h3 style="color:#34495e;">Limitations of Arrays</h3>
 
 <ul>
-  <li>Fixed size after creation</li>
-  <li>Can store only one data type</li>
-  <li>Insertion and deletion operations are costly</li>
+  <li><b>Fixed size</b> after creation</li>
+  <li>Stores only <b>one data type</b></li>
+  <li><b>Insertion and deletion</b> are costly</li>
 </ul>
 
 <h3 style="color:#34495e;">Summary</h3>
 
 <p>
-Arrays are essential in Java programming. They help organize related data efficiently and provide constant-time access using indexes. 
-They are widely used in algorithms, data processing, and real-world applications.
+<b>Arrays</b> help organize related data efficiently and provide 
+<b>constant-time access</b> using indexes. They are widely used in 
+<b>algorithms</b> and <b>real-world applications</b>.
 </p>
+
+</div>
