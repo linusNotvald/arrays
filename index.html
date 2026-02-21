@@ -1,83 +1,191 @@
-<h1>Basic Python Example</h1>
+<h1 style="color:#2c3e50;">Understanding Arrays in Java</h1>
 
 <p>
-Let’s look at a simple Python example that demonstrates basic concepts like variables, input/output, conditions, and loops.
+Arrays in Java allow us to store multiple values of the same data type inside a single variable. 
+They are one of the most fundamental data structures used in programming.
 </p>
 
-<h2>What This Example Covers</h2>
+<h3 style="color:#34495e;">What You Will Learn</h3>
 
 <ul>
-  <li>Printing output</li>
-  <li>Taking user input</li>
-  <li>Using variables</li>
-  <li>Conditional statements</li>
-  <li>Loops</li>
+  <li>What an array is ?</li>
+  <li>How to declare and create an array ?</li>
+  <li>Primitive vs Object arrays</li>
+  <li>How to access and modify elements ?</li>
+  <li>How to traverse an array using loops ?</li>
+  <li>How to pass arrays to methods ?</li>
 </ul>
 
-<h2>Example Python Code</h2>
+<h3 style="color:#34495e;">Basic Example</h3>
 
-<pre>
-# Basic Python Program
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+// Simple Java Array Example
 
-# Taking input
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
+public class DemoArray {
 
-# Printing output
-print("Hello", name)
+    public static void main(String[] args) {
 
-# Condition check
-if age >= 18:
-    print("You are an adult")
-else:
-    print("You are a minor")
+        // Primitive array
+        int[] numbers = {5, 15, 25, 35};
 
-# Loop example
-print("Numbers from 1 to 5:")
-for i in range(1, 6):
-    print(i)
+        System.out.print("Numbers: ");
+        for (int i = 0; i &lt; numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+
+        System.out.println();
+
+        // Object array
+        String[] cities = {"Delhi", "Mumbai", "Chennai"};
+
+        System.out.print("Cities: ");
+        for (int i = 0; i &lt; cities.length; i++) {
+            System.out.print(cities[i] + " ");
+        }
+    }
+}
 </pre>
 
-<h2>Code Explanation</h2>
+<h3 style="color:#34495e;">Output</h3>
 
-<table border="1" cellpadding="8">
-  <tr>
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+Numbers: 5 15 25 35
+Cities: Delhi Mumbai Chennai
+</pre>
+
+<h3 style="color:#34495e;">Explanation</h3>
+
+<table border="1" cellpadding="8" style="border-collapse:collapse;">
+  <tr style="background:#ecf0f1;">
     <th>Concept</th>
-    <th>Description</th>
+    <th>Meaning</th>
   </tr>
   <tr>
-    <td>Input</td>
-    <td>Reads data from the user</td>
+    <td>Array</td>
+    <td>Collection of similar data stored in continuous memory</td>
   </tr>
   <tr>
-    <td>Variables</td>
-    <td>Stores user data</td>
+    <td>Index</td>
+    <td>Position number of element (starts from 0)</td>
   </tr>
   <tr>
-    <td>Condition</td>
-    <td>Checks age eligibility</td>
+    <td>length</td>
+    <td>Property used to get total number of elements</td>
   </tr>
   <tr>
     <td>Loop</td>
-    <td>Repeats printing numbers</td>
+    <td>Used to access elements one by one</td>
   </tr>
 </table>
 
-<h2>How the Program Works</h2>
+<h3 style="color:#34495e;">Declaring and Creating an Array</h3>
 
-<ol>
-  <li>User enters their name and age</li>
-  <li>The program greets the user</li>
-  <li>It checks if the user is an adult</li>
-  <li>It prints numbers from 1 to 5</li>
-</ol>
-
-<h2>Program Flow Diagram</h2>
-
-<img src="images/python-basic-flow.png" alt="Flowchart showing input processing condition check and loop execution in a basic Python program" width="500">
-
-<h2>Summary</h2>
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+int[] arr;        // Declaration
+arr = new int[4]; // Memory allocation
+</pre>
 
 <p>
-This basic Python program demonstrates fundamental programming concepts including input/output, variables, conditions, and loops. These are the building blocks for writing more complex Python programs.
+Once created, the array size cannot be changed.
+</p>
+
+<h3 style="color:#34495e;">Using Array Literal</h3>
+
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+int[] marks = {80, 85, 90, 95};
+</pre>
+
+<p>
+Java automatically determines the size based on the number of elements.
+</p>
+
+<h3 style="color:#34495e;">Accessing Elements</h3>
+
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+int[] data = {10, 20, 30};
+
+System.out.println(data[0]);  // 10
+System.out.println(data[2]);  // 30
+</pre>
+
+<p>
+Valid index range: 0 to data.length - 1
+</p>
+
+<h3 style="color:#34495e;">Updating Elements</h3>
+
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+int[] data = {10, 20, 30};
+
+data[1] = 50;
+System.out.println(data[1]);   // 50
+</pre>
+
+<h3 style="color:#34495e;">Traversing an Array</h3>
+
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+int[] values = {1, 2, 3, 4, 5};
+
+for (int i = 0; i &lt; values.length; i++) {
+    System.out.print(values[i] + " ");
+}
+</pre>
+
+<h3 style="color:#34495e;">Passing Array to a Method</h3>
+
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+public static void printSum(int[] arr) {
+
+    int total = 0;
+
+    for (int i = 0; i &lt; arr.length; i++) {
+        total += arr[i];
+    }
+
+    System.out.println("Total: " + total);
+}
+</pre>
+
+<h3 style="color:#34495e;">Real Life Examples of Arrays</h3>
+
+<ul>
+  <li><b>Student Marks:</b> Storing marks of 5 subjects in an array like {85, 90, 78, 88, 92}</li>
+  <li><b>Temperature Records:</b> Storing daily temperatures of a week</li>
+  <li><b>Roll Numbers:</b> Storing roll numbers of students in a classroom</li>
+  <li><b>Monthly Expenses:</b> Tracking expenses for 12 months using an array</li>
+  <li><b>Product Prices:</b> Storing prices of items in a shopping cart</li>
+</ul>
+
+<p>
+In real applications like banking systems, exam result systems, and inventory management, arrays are frequently used to store and process structured data efficiently.
+</p>
+
+<h3 style="color:#34495e;">Common Error</h3>
+
+<pre style="background:#f4f6f7; padding:15px; border-radius:6px;">
+int[] arr = new int[3];
+System.out.println(arr[4]);   // Causes ArrayIndexOutOfBoundsException
+</pre>
+
+<h3 style="color:#34495e;">Advantages of Arrays</h3>
+
+<ul>
+  <li>Fast element access using index</li>
+  <li>Simple and easy to use</li>
+  <li>Efficient memory structure</li>
+</ul>
+
+<h3 style="color:#34495e;">Limitations of Arrays</h3>
+
+<ul>
+  <li>Fixed size after creation</li>
+  <li>Can store only one data type</li>
+  <li>Insertion and deletion operations are costly</li>
+</ul>
+
+<h3 style="color:#34495e;">Summary</h3>
+
+<p>
+Arrays are essential in Java programming. They help organize related data efficiently and provide constant-time access using indexes. 
+They are widely used in algorithms, data processing, and real-world applications.
 </p>
